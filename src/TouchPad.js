@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-function Touch({ x, y, isEnded = false }) {
+function Touch({
+    x,
+    y,
+    isEnded = false,
+    onExitAnimationEnd
+}) {
     const initialClassName = isEnded ? 'touch' : 'touch touch-start';
     const [className, setClassName] = useState(initialClassName);
     const style = { top: y, left: x };
@@ -16,8 +21,17 @@ function Touch({ x, y, isEnded = false }) {
         }
     });
 
+    function onTransitionEnd(event) {
+        if (className === 'touch touch-end') onExitAnimationEnd();
+    }
+
     return (
-        <div className={className} style={style}></div>
+        <div
+            className={className}
+            style={style}
+            onTransitionEnd={onTransitionEnd}
+        >
+        </div>
     );
 }
 
@@ -57,9 +71,13 @@ function TouchPad({ children }) {
         }));
     }
 
+    function removeTouch(index) {
+        setTouches(touches.filter((touch, i) => i !== index));
+    }
+
     return (
         <div className={'ripple-container'} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-            {touches.map((touch, i) => <Touch {...touch} key={i} />)}
+            {touches.map((touch, i) => <Touch {...touch} key={i} onExitAnimationEnd={() => removeTouch(i)} />)}
             {children}
         </div>
     );
