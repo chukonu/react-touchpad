@@ -17,6 +17,7 @@ code {
 }
 
 .touch {
+  pointer-events: none;
   width: 3rem;
   height: 3rem;
   opacity: 1;
