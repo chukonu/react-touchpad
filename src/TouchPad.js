@@ -11,14 +11,13 @@ function Touch({
     const style = { top: y, left: x };
 
     useEffect(() => {
+        let handle;
         if (className === 'touch touch-start') {
-            requestAnimationFrame(() => {
-                setClassName('touch');
-                // thus, I have to use a State for the Class name.
-            });
+            handle = requestAnimationFrame(() => setClassName('touch'));
         } else if (className === 'touch' && isEnded) {
-            requestAnimationFrame(() => setClassName('touch touch-end'));
+            handle = requestAnimationFrame(() => setClassName('touch touch-end'));
         }
+        return () => cancelAnimationFrame(handle);
     });
 
     function onTransitionEnd(event) {
