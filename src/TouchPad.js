@@ -70,13 +70,35 @@ function TouchPad({ children }) {
         }));
     }
 
-    function removeTouch(index) {
-        setTouches(touches.filter((touch, i) => i !== index));
+    function onMouseDown(event) {
+        const changedTouches = [{
+            identifier: 0,
+            pageX: event.pageX,
+            pageY: event.pageY,
+        }];
+        onTouchStart({ changedTouches });
+    }
+
+    function onMouseUp(event) {
+        const changedTouches = [{
+            identifier: 0,
+        }];
+        onTouchEnd({ changedTouches });
+    }
+
+    function removeTouch(touch) {
+        setTouches(touches.filter((t) => t !== touch));
     }
 
     return (
-        <div className={'ripple-container'} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-            {touches.map((touch, i) => <Touch {...touch} key={i} onExitAnimationEnd={() => removeTouch(i)} />)}
+        <div
+            className={'ripple-container'}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+        >
+            {touches.map((touch, i) => <Touch {...touch} key={i} onExitAnimationEnd={() => removeTouch(touch)} />)}
             {children}
         </div>
     );
