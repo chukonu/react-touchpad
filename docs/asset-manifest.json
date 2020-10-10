@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-touchpad/static/css/main.9c93c178.chunk.css",
+    "main.js": "/react-touchpad/static/js/main.79357270.chunk.js",
+    "main.js.map": "/react-touchpad/static/js/main.79357270.chunk.js.map",
+    "runtime-main.js": "/react-touchpad/static/js/runtime-main.0be17a37.js",
+    "runtime-main.js.map": "/react-touchpad/static/js/runtime-main.0be17a37.js.map",
+    "static/js/2.145ad3de.chunk.js": "/react-touchpad/static/js/2.145ad3de.chunk.js",
+    "static/js/2.145ad3de.chunk.js.map": "/react-touchpad/static/js/2.145ad3de.chunk.js.map",
+    "index.html": "/react-touchpad/index.html",
+    "precache-manifest.a053af8924575847d22b1009b1a3f532.js": "/react-touchpad/precache-manifest.a053af8924575847d22b1009b1a3f532.js",
+    "service-worker.js": "/react-touchpad/service-worker.js",
+    "static/css/main.9c93c178.chunk.css.map": "/react-touchpad/static/css/main.9c93c178.chunk.css.map",
+    "static/js/2.145ad3de.chunk.js.LICENSE.txt": "/react-touchpad/static/js/2.145ad3de.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/react-touchpad/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0be17a37.js",
+    "static/js/2.145ad3de.chunk.js",
+    "static/css/main.9c93c178.chunk.css",
+    "static/js/main.79357270.chunk.js"
+  ]
+}
