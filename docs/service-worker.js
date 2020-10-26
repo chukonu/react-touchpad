@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-touchpad/precache-manifest.a053af8924575847d22b1009b1a3f532.js"
+  "/react-touchpad/precache-manifest.af857f06fe85ab58a9be4c4e8137acd5.js"
 );
 
 self.addEventListener('message', (event) => {

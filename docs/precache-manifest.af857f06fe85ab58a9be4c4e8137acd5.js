@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2cf2d8a8548091ed46f4e10801a63803",
+    "revision": "6a49248adeabf184892000b3c9538613",
     "url": "/react-touchpad/index.html"
   },
   {
-    "revision": "659d5fa2b73196fe7dd0",
+    "revision": "6be593ca4ba186601067",
     "url": "/react-touchpad/static/css/main.9c93c178.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-touchpad/static/js/2.145ad3de.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "659d5fa2b73196fe7dd0",
-    "url": "/react-touchpad/static/js/main.79357270.chunk.js"
+    "revision": "6be593ca4ba186601067",
+    "url": "/react-touchpad/static/js/main.50ed3440.chunk.js"
   },
   {
     "revision": "7da8363a4bb6d3d54465",
