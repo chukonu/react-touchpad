@@ -10,15 +10,15 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Touch or click anywhere to create ripples
         </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://github.com/chukonu/react-touchpad"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Source
         </a>
         </header>
       </div>
